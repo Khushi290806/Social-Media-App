@@ -1,16 +1,33 @@
-# React + Vite
+# Social Media App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SocialMediaApp is a full-stack post sharing app with a React frontend, React Router data APIs, and an Express/MongoDB backend.
 
-Currently, two official plugins are available:
+## Features
+- View posts loaded through React Router loaders.
+- Create posts using React Router form actions.
+- Add title, body, user ID, and hashtags.
+- Like posts with backend persistence.
+- Delete posts from the feed.
+- Post state managed through React Context.
+- Backend API with MongoDB post schema.
+- Posts sorted by newest first.
+- API fallback support for local `/api/posts` or standalone backend URL.
+- Bootstrap and React Icons based UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+React, Vite, React Router, Context API, Bootstrap, React Icons, Node.js, Express.js, MongoDB, Mongoose
 
-## React Compiler
+## How to Run
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Install dependencies:
+   npm install
+2. Create a .env file:
+   MONGO_URI=your_mongodb_connection_string
+3. Start the backend server:
+   npm run server
+4. In another terminal, start the React frontend:
+   npm run dev
+5. Open the Vite URL shown in the terminal, usually:
+   http://localhost:5173
+6. Backend API runs at:
+   http://localhost:3001/posts
