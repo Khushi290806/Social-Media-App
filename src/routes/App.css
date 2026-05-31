@@ -1,0 +1,268 @@
+.app-container,
+.content,
+.posts-grid,
+.post-card {
+  box-sizing: border-box;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  width: 200px;
+  background: #111827;
+  color: #f9fafb;
+  padding: 20px 16px;
+}
+
+.sidebar-title {
+  display: inline-block;
+  color: #f9fafb;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #e5e7eb;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background: #1f2937;
+  color: #ffffff;
+}
+
+.app-header {
+  background: #111827;
+  border-bottom: 1px solid #374151;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.header-nav {
+  display: flex;
+  gap: 16px;
+}
+
+.header-nav-link {
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.header-nav-link:hover {
+  color: #ffffff;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin: 28px 36px;
+}
+
+.posts-grid > * {
+  min-width: 0;
+}
+
+.post-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  background: #ffffff;
+  transition: box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+.hashtag {
+  display: inline-block;
+  margin: 0 6px 6px 0;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 0.85rem;
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.action-btn:hover {
+  transform: scale(1.08);
+  color: #2563eb;
+}
+
+.create-post {
+  max-width: 760px;
+  width: calc(100% - 64px);
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font: inherit;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.primary-btn {
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.welcome-message {
+  margin: 100px 0;
+  text-align: center;
+}
+
+.spinner {
+  margin: 10% 0;
+  display: flex;
+  justify-content: center;
+}
+
+.spinner-circle {
+  width: 56px;
+  height: 56px;
+  border: 6px solid #dbeafe;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.app-footer {
+  margin-top: auto;
+  padding: 16px 24px 20px;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding-bottom: 14px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.footer-link,
+.footer-text {
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.footer-copy {
+  text-align: center;
+  color: #6b7280;
+  margin: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 992px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 16px;
+  }
+}
